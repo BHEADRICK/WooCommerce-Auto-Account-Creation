@@ -1,11 +1,11 @@
 <?php
 /*
-Plugin Name: My Plugin Name
+Plugin Name: WooCommerce Auto Account Creation
 Plugin URI:
 Description:
 Version: 1.0.0
-Author: Author Name
-Author URI: https://authorurl.com
+Author: Bryan Headirck
+Author URI: https://catmanstudios.com
  License: GNU General Public License v3.0
  License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -17,36 +17,36 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-class PluginName {
+class WooCommerceAutoAccountCreation {
 
 	/*--------------------------------------------*
 	 * Constants
 	 *--------------------------------------------*/
-	const name = 'My Plugin Name';
-	const slug = 'plugin-name';
+	const name = 'WooCommerce Auto Account Creation';
+	const slug = 'woocommerce-auto-account-creation';
 
 	/**
 	 * Constructor
 	 */
 	function __construct() {
 		//register an activation hook for the plugin
-		register_activation_hook( __FILE__, array( $this, 'install_plugin_name' ) );
+		register_activation_hook( __FILE__, array( $this, 'install_woocommerce_auto_account_creation' ) );
 
 		//Hook up to the init action
-		add_action( 'init', array( $this, 'init_plugin_name' ) );
+		add_action( 'init', array( $this, 'init_woocommerce_auto_account_creation' ) );
 	}
 
 	/**
 	 * Runs when the plugin is activated
 	 */
-	function install_plugin_name() {
+	function install_woocommerce_auto_account_creation() {
 		// do not generate any output here
 	}
 
 	/**
 	 * Runs when the plugin is initialized
 	 */
-	function init_plugin_name() {
+	function init_woocommerce_auto_account_creation() {
 		// Setup localization
 		load_plugin_textdomain( self::slug, false, dirname( plugin_basename( __FILE__ ) ) . '/lang' );
 		// Load JavaScript and stylesheets
@@ -127,4 +127,4 @@ class PluginName {
 	} // end load_file
 
 } // end class
-new PluginName();
+new WooCommerceAutoAccountCreation();
